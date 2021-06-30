@@ -58,11 +58,10 @@ class ProjectController extends Controller
     {
         
         $evaluations=DB::table('evaluations')
-            ->join('people', function ($join) use($project) {
+            ->join('people', function ($join) use ($project) {
                 $join->on('evaluations.people_id', '=', 'people.id')
                      ->where('evaluations.projects_id', '=', $project);
             })
-            
             ->get();
 
 
