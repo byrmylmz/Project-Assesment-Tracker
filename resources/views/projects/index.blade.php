@@ -24,7 +24,9 @@
                 <div class="card-header">{{ __('Projects') }}</div>
 
                 <div class="card-body">
-                    <a class="btn btn-primary" href="{{ route('projects.create') }}">Yeni Proje</a>
+                    <a class="btn btn-lg btn-primary" href="{{ route('projects.create') }}">Yeni Proje Ekle</a>
+                    <a class="btn btn-lg btn-primary"  href="{{ route('evaluations.create') }}">Yeni Değerlendirme Ekle</a>
+
                     <br /><br />
                     <table  class="table table-striped" id="datatable" >
                         <thead>
