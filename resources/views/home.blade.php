@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Proje Değerlendirme Takip Sistemi') }}</div>
+                <div class="card-header"><b>Proje Değerlendirme Takip Sistemi</b></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Kullanıcı Adı: {{ Auth::user()->name }} 
+                    <b>Kullanıcı Adı:</b> {{ Auth::user()->name }} 
                 </div>
             </div>
         </div>
