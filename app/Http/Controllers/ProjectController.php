@@ -63,14 +63,9 @@ class ProjectController extends Controller
                      ->where('evaluations.projects_id', '=', $project);
             })
             ->get();
-
-
-           
             
         $projects=Project::where('id',$project)->get();
         
-        
-
         return view('projects.show',compact('projects','evaluations'));
     }
 
