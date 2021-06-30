@@ -62,7 +62,9 @@ class ProjectController extends Controller
                 $join->on('evaluations.people_id', '=', 'people.id')
                      ->where('evaluations.projects_id', '=', $project);
             })
+            
             ->get();
+
 
            
             
