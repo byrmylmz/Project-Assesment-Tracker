@@ -11,7 +11,7 @@ class CompanyApiController extends Controller
     public function getCompanies()  
     {
         $query=DB::table('companies')->all();
-           return response->json($query);
+           return response()->json($query);
 
         
     }
