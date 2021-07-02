@@ -11,5 +11,5 @@
 | `api/people` | `string` | Kişiler Listesi 
 | `api/project` | `string` | Proje Listesi 
 | `api/evaluations` | `string` | Değerlendirme  Listesi 
-| `api/companıes` | `string` | Şirket  Listesi 
+| `api/companies` | `string` | Şirket  Listesi 
 
