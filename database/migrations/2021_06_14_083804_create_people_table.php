@@ -20,7 +20,7 @@ class CreatePeopleTable extends Migration
             $table->string('person_entitle');
             $table->string('person_phone_number');
             $table->string('person_status');
-            $table->string('person_nor');
+            $table->string('person_nor')->nullable();
             $table->foreignId('users_id')->constrained();   
             $table->timestamps();
         });
