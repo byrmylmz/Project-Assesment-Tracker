@@ -2,7 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\EvaluationsApiController;
+use App\Http\Controllers\Api\ProjectsApiController;
+use App\Http\Controllers\Api\PeopleApiController;
+use App\Http\Controllers\Api\CompanyApiController;
 
 
 /*
