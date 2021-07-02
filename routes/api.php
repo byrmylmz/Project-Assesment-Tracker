@@ -26,6 +26,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('people',[PeopleApiController::class,'getPeople'])->name('api.people');
 Route::get('projects',[ProjectsApiController::class,'getProjects'])->name('api.project');
 Route::get('evaluations',[EvaluationsApiController::class,'getEvaluations'])->name('api.eva');
-Route::get('companies',[CompanyApiController::class,'getCompanies'])->name('api.com');
+//Route::get('companies',[CompanyApiController::class,'getCompanies'])->name('api.com');
 
 
