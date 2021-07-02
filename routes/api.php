@@ -2,10 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\EvaluationsApiController;
-use App\Http\Controllers\Api\ProjectsApiController;
-use App\Http\Controllers\Api\PeopleApiController;
-use App\Http\Controllers\Api\CompanyApiController;
+
 
 
 /*
@@ -23,10 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-Route::get('people',[PeopleApiController::class,'getPeople'])->name('people.list');
-Route::get('projects',[ProjectsApiController::class,'getProjects'])->name('projects.list');
-Route::get('evaluations',[EvaluationsApiController::class,'getEvaluations'])->name('evaluations.list');
-Route::get('companies',[CompanyApiController::class,'getCompanies'])->name('companies.list');
-    
 
