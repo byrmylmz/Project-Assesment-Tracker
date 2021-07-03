@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\BayEvaluationApiController;
 use App\Http\Controllers\Api\BayPeopleApiController;
 use App\Http\Controllers\Api\BayProjectsApiController;
 use App\Http\Controllers\Api\BayCompanyApiController;
+use App\Http\Controllers\Api\DashboardApiController;
 
 
 /*
@@ -27,5 +28,7 @@ Route::get('people',[BayPeopleApiController::class,'getPeople'])->name('api.peop
 Route::get('projects',[BayProjectsApiController::class,'getProjects'])->name('api.project');
 Route::get('evaluations',[BayEvaluationApiController::class,'getEvaluations'])->name('api.evaluation');
 Route::get('companies',[BayCompanyApiController::class,'getCompanies'])->name('api.companies');
+Route::get('dashboard/academic',[DashboardApiController::class,'getAcademic'])->name('dashboard.academic');
+Route::get('dashboard/specialist',[DashboardApiController::class,'getSpecialist'])->name('dashboard.specialist');
 
 
