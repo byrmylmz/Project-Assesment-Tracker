@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\EvaluationsApiController;
-use App\Http\Controllers\Api\ProjectsApiController;
-use App\Http\Controllers\Api\PeopleApiController;
-use App\Http\Controllers\Api\CompanyApiController;
+use App\Http\Controllers\Api\BayEvaluationsApiController;
+use App\Http\Controllers\Api\BayPeopleApiController;
+use App\Http\Controllers\Api\BayProjectsApiController;
+use App\Http\Controllers\Api\BayCompanyApiController;
 
 
 /*
@@ -23,9 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('people',[PeopleApiController::class,'getPeople'])->name('api.people');
-Route::get('projects',[ProjectsApiController::class,'getProjects'])->name('api.project');
-Route::get('evaluations',[EvaluationsApiController::class,'getEvaluations'])->name('api.eva');
-//Route::get('companies',[CompanyApiController::class,'getCompanies'])->name('api.com');
+Route::get('people',[BayPeopleApiController::class,'getPeople'])->name('api.people');
+Route::get('projects',[BayProjectsApiController::class,'getProjects'])->name('api.project');
+Route::get('evaluations',[BayEvaluationsApiController::class,'getEvaluations'])->name('api.evaluation');
+Route::get('companies',[BayCompanyApiController::class,'getCompanies'])->name('api.companies');
 
 
