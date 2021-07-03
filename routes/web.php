@@ -30,7 +30,7 @@ use App\Http\Controllers\Api\CompanyApiController;
 
 Auth::routes([
     'register' => false,
-    'login'=>false,
+    
    
 ]);
 Route::group(['middleware'=>'auth'], function(){
