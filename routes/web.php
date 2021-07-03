@@ -28,7 +28,10 @@ use App\Http\Controllers\Api\CompanyApiController;
 */
 
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+   
+]);
 Route::group(['middleware'=>'auth'], function(){
 Route::get('/', function () { return view('home'); });
 Route::get('/home', function () { return view('home'); });
