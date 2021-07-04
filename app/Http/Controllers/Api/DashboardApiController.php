@@ -22,7 +22,7 @@ class DashboardApiController extends Controller
     public function getTopTen(){
         $score=DB::table('evaluations')
             ->join('projects','evaluations.projects_id','=','projects.id')
-            ->selectRaw('project_name,avg(evaluations.evaluation_score) as average')
+            ->selectRaw('project_name,avg(evaluation_score) as average')
             ->groupBy('projects_id','project_name')
             ->limit(10)
             ->orderByDesc('average')

@@ -31,6 +31,6 @@ Route::get('companies',[BayCompanyApiController::class,'getCompanies'])->name('a
 
 Route::get('dashboard/academic',[DashboardApiController::class,'getAcademic'])->name('dashboard.academic');
 Route::get('dashboard/specialist',[DashboardApiController::class,'getSpecialist'])->name('dashboard.specialist');
-Route::get('dashboard/topTen',[DashboardApiController::class,'getTopTen'])->name('dashboard.topten');
+Route::get('dashboard/topten',[DashboardApiController::class,'getTopTen'])->name('dashboard.topten');
 
 
