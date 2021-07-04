@@ -34,4 +34,3 @@ class CompanyFactory extends Factory
     }
 }
 
-$factory->define(App\Persons::class, function (Faker\Generator $faker) { return [ 'name' => $faker->company, 'email' => $faker->safeEmail, ]; });
