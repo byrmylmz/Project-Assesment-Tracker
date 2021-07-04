@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
            // PersonTableSeeder::class,
            // ProjectTableSeeder::class,
-            EvaluationTableSeeder::class,
+           // EvaluationTableSeeder::class,
+            CompanyTableSeeder::class,
         ]);
     }
 }
