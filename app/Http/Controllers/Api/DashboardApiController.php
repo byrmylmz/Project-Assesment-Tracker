@@ -25,9 +25,8 @@ class DashboardApiController extends Controller
             ->selectRaw('project_name, avg(evaluation_score) as average')
             ->groupBy('projects_id','project_name')
             ->limit(10)
-            ->orderByDesc('average')
+            ->orderBy('average','DESC')
             ->get();
         return response()->json($score);
-
     }
 }
