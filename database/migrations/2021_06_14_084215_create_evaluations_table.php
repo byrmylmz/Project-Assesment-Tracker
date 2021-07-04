@@ -15,7 +15,7 @@ class CreateEvaluationsTable extends Migration
     {
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
-            $table->string('evaluation_score');
+            $table->integer('evaluation_score');
             $table->longText('evaluation_comment');
 
             $table->foreignId('users_id')->constrained();
