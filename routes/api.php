@@ -28,7 +28,9 @@ Route::get('people',[BayPeopleApiController::class,'getPeople'])->name('api.peop
 Route::get('projects',[BayProjectsApiController::class,'getProjects'])->name('api.project');
 Route::get('evaluations',[BayEvaluationApiController::class,'getEvaluations'])->name('api.evaluation');
 Route::get('companies',[BayCompanyApiController::class,'getCompanies'])->name('api.companies');
+
 Route::get('dashboard/academic',[DashboardApiController::class,'getAcademic'])->name('dashboard.academic');
 Route::get('dashboard/specialist',[DashboardApiController::class,'getSpecialist'])->name('dashboard.specialist');
+Route::get('dashboard/topTen',[DashboardApiController::class,'getTopTen'])->name('dashboard.topten');
 
 
