@@ -27,11 +27,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('people',[BayPeopleApiController::class,'getPeople'])->name('api.people');
 Route::get('projects',[BayProjectsApiController::class,'getProjects'])->name('api.project');
 Route::get('evaluations',[BayEvaluationApiController::class,'getEvaluations'])->name('api.evaluation');
-Route::get('/companies',[BayCompanyApiController::class,'getCompanies'])->name('api.companies');
-Route::post('/companies',[BayCompanyApiController::class,'store']);
+
+//companies Crud
+Route::post('/companies',[BayCompanyApiController::class,'store'])->name('api.companiesStore');
+Route::get('/companies',[BayCompanyApiController::class,'getCompanies'])->name('api.companiesGet');
+Route::put('/companies/{company}',[BayCompanyApiController::class,'update'])->name('api.companiesUpdate');
+Route::delete('/companies/{company}',[BayCompanyApiController::class,'destroy'])->name('api.companiesDelete');
 
 
-
+//dashboard routes
 Route::get('dashboard/academic',[DashboardApiController::class,'getAcademic'])->name('dashboard.academic');
 Route::get('dashboard/specialist',[DashboardApiController::class,'getSpecialist'])->name('dashboard.specialist');
 Route::get('dashboard/topten',[DashboardApiController::class,'getTopTen'])->name('dashboard.topten');
